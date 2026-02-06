@@ -1,4 +1,4 @@
-# 📝 Proyecto: Lista de Tareas (To-Do App)
+# 📝 Proyecto: Lista de Tareas (Todo)
 
 Una aplicación de gestión de tareas robusta y funcional desarrollada con **JavaScript Vanilla**. Este proyecto permite a los usuarios organizar sus actividades diarias con características avanzadas de personalización y persistencia de datos.
 
