@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-actions">
+            <h1>📝 Mi Lista de Tareas</h1>
+            <button id="toggle-dark-mode" title="Cambiar modo">🌓</button>
+        </div>
+
+        <!-- Formulario para agregar tareas -->
+        <form id="form-tarea">
+        <input type="text" id="input-tarea" placeholder="¿Qué necesitas hacer?" required>
+        
+        <input type="date" id="input-fecha" title="Fecha límite">
+        <select id="select-categoria">
+            <option value="Personal">🏠 Personal</option>
+            <option value="Trabajo">💼 Trabajo</option>
+            <option value="Estudio">📚 Estudio</option>
+        </select>
+        
+        <select id="select-prioridad">
+            <option value="baja">🟢 Baja</option>
+            <option value="media" selected>🟡 Media</option>
+            <option value="alta">🔴 Alta</option>
+        </select>
+        <button type="submit">Agregar</button>
+
+        <div style="text-align: center; margin-top: 10px;">
+            <button id="btn-limpiar" class="filtro">🧹 Limpiar completadas</button>
+        </div>
+    </form>
+
+        <!-- Filtros -->
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todas">Todas</button>
+            <button class="filtro" data-filtro="pendientes">Pendientes</button>
+            <button class="filtro" data-filtro="completadas">Completadas</button>
+        </div>
+
+        <div class="filtros-categorias">
+            <button class="filtro-cat activo" data-cat="todas">Todas las categorías</button>
+            <button class="filtro-cat" data-cat="Personal">🏠 Personal</button>
+            <button class="filtro-cat" data-cat="Trabajo">💼 Trabajo</button>
+            <button class="filtro-cat" data-cat="Estudio">📚 Estudio</button>
+        </div>
+
+        <!-- Lista de tareas -->
+        <ul id="lista-tareas">
+            <!-- Las tareas se agregarán aquí con JavaScript -->
+        </ul>
+
+        <!-- Contador -->
+        <p class="contador">
+            <span id="contador-pendientes">0</span> tareas pendientes
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
